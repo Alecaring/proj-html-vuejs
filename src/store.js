@@ -18,4 +18,7 @@ export const store = reactive ({
     toggleMenu() {
         this.isOpen = !this.isOpen;
     },
+    getUrlPath(img) {
+        return new URL(`../assets/${img}.jpg`, import.meta.url).href;
+    }
 });
