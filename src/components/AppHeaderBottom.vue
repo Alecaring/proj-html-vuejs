@@ -5,7 +5,7 @@ export default {
 </script>
   
 <template>
-    <section class="headerBottom container-fluid bg-body-secondary py-3 px-4">
+    <section class="container-fluid bg-body-secondary py-3 px-4">
         <small><span class="px-2 fw-bold">
             <router-link class="text-dark link-offset-2 link-underline link-underline-opacity-0" :to="{ name: 'home' }">
             HOME
@@ -17,9 +17,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.headerBottom {
-    position: fixed;
-    top: 15vh;
-    z-index: 1;
-}
+
 </style>

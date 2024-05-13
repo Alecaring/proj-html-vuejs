@@ -9,10 +9,8 @@ export default {
 </script>
 
 <template>
-    <h1>HOME</h1>
-    <section>
-        <router-link :to="{ name: 'about' }">Scopri di più</router-link>
-        <router-link :to="{ name: 'contacts' }">Contatti</router-link>
+    <section class="container-fluid p-0">
+        <img class="w-100" src="../assets/bg3.jpg" alt="">
     </section>
 </template>
 

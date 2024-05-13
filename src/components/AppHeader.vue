@@ -2,13 +2,20 @@
 import { store } from "../store";
 import AppHeaderBottom from "./AppHeaderBottom.vue";
 import Search from "./Search.vue";
+
 export default {
     components: { Search, AppHeaderBottom },
     data() {
         return {
             store,
+            
         }
     },
+    computed: {
+    isHome() {
+      return this.$route.name === 'home';
+    }
+  },
     methods: {
 
     }
@@ -16,8 +23,9 @@ export default {
 </script>
   
 <template>
-    <section
-        class="ms_header container-fluid bg-dark py-4 px-5 d-flex align-items-center justify-content-between position-fixed z-3">
+    <section :class="isHome ? 'bg-trasparent position-fixed z-3' : 'bg-dark'"
+        class="ms_header container-fluid py-4 px-5 d-flex align-items-center justify-content-between">
+
         <div class="py-3">
 
             <!-- HOME -->
@@ -72,8 +80,7 @@ export default {
         </div>
         <Search />
     </section>
-    <div class="ms_spaces"></div>
-    <AppHeaderBottom />
+    <AppHeaderBottom :class="isHome ? 'd-none' : ''" />
 </template>
 
 <style lang="scss" scoped>
