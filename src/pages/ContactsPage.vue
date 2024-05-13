@@ -1,15 +1,15 @@
 <script>
+import AppFormContact from "../components/AppFormContact.vue";
+import MapComponent from "../components/MapComponent.vue";
 export default {
-    data (){
-        return{
-            
-        }
-    }
-}
+    components: { MapComponent, AppFormContact,  },
+};
 </script>
-
+  
 <template>
-    <h1>CONTACTS</h1>
+    <div>
+        
+        <MapComponent />
+        <AppFormContact />
+    </div>
 </template>
-
-<style scoped></style>
