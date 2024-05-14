@@ -21,9 +21,9 @@ export const store = reactive({
   getUrlPath(img) {
     return new URL(`../assets/${img}.jpg`, import.meta.url).href;
   },
-});
-
-export const storeYacht = reactive({
+  //_______________________
+  
+  // CARDS
   yachtInfo: [
     {
       category: "Range of Yachts",
@@ -46,4 +46,7 @@ export const storeYacht = reactive({
         "Despite a truly amazing variety of services and yachts that we have, it is also truly mesmerizing that our pricing policy is such a fair one – affordable to almost any American!",
     },
   ],
+  //________
+
+  //CARDS WITH OVERLAY
 });

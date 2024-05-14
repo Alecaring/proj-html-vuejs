@@ -1,6 +1,6 @@
 <script>
 import AppCard from "../components/AppCard.vue";
-import { storeYacht } from "../store";
+import { store } from "../store";
 
 export default {
   components: {
@@ -8,7 +8,7 @@ export default {
   },
   data() {
     return {
-      storeYacht,
+      store,
     };
   },
 };
@@ -20,7 +20,7 @@ export default {
     <h2>About us</h2>
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2">
-        <div class="col" v-for="curCard in storeYacht.yachtInfo">
+        <div class="col" v-for="curCard in store.yachtInfo">
           <!-- CARD -->
 
           <AppCard :cardObj="curCard" />
