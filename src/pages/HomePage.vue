@@ -1,9 +1,15 @@
 <script>
+
+import AppBanner from "../components/AppBanner.vue"
 import { store } from '../store';
+
 export default {
-    data(){
-        return{
-            store,
+    components:{
+        AppBanner,
+    },
+    data() {
+        return {
+            store,    
         }
     },
     methods: {
@@ -18,6 +24,7 @@ export default {
     <section class="container-fluid p-0">
         <img class="w-100" src="../assets/bg2.jpg" alt="">
     </section>
+    <AppBanner />
 </template>
 
 <style scoped></style>

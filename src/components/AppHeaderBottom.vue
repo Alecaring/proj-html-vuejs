@@ -3,7 +3,7 @@ export default {
     components: {},
 };
 </script>
-  
+
 <template>
     <section class="container-fluid bg-body-secondary py-3 px-4">
         <small><span class="px-2 fw-bold">
