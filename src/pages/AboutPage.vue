@@ -18,6 +18,7 @@ export default {
   <div>VIDEO</div>
   <div>
     <h2>About us</h2>
+    
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2">
         <div class="col" v-for="curCard in store.yachtInfo">
@@ -28,6 +29,7 @@ export default {
         </div>
       </div>
     </div>
+
   </div>
 
   <section>

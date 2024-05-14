@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-    <section :class="isHome ? 'bg-trasparent position-fixed z-3' : 'bg-dark'"
+    <section :class="isHome ? 'bg-trasparent position-fixed ms_zindex' : 'bg-dark'"
         class="ms_header container-fluid py-4 px-5 d-flex align-items-center justify-content-between">
 
         <div class="py-3">
@@ -94,5 +94,8 @@ export default {
 
 .ms_spaces {
     padding: 25vh 0 0;
+}
+.ms_zindex {
+    z-index: 99999;
 }
 </style>

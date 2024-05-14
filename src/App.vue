@@ -20,8 +20,8 @@ import AppFooter from "./components/AppFooter.vue"
 
   <AppHeader />
 
+  
   <router-view></router-view>
-
   <AppFooter />
 </template>
 

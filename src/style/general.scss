@@ -5,3 +5,11 @@ input:focus,
 textarea:focus {
     outline: none;
 }
+html::-webkit-scrollbar {
+    display: none;
+  }
+  
+  html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }

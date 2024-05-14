@@ -69,8 +69,8 @@ export default {
     <section class="ms_banner-up">
         <div class="p-4 d-flex">
             <div class="ms_empty"></div>
-            <div class="ms_content">
-                <h2 class="fw-bold fs-1 mt-2 mb-5">Our History</h2>
+            <div class="ms_content d-flex flex-column justify-content-center align-items-start pe-5">
+                <h2 class="fw-bold mb-4">Our History</h2>
                 <hr>
                 <p class="fw-bold mb-4">
                     Founded by a worldwide-famous yacht racer Alfred Tannenstrick, since its inception back in 1977,
@@ -85,17 +85,18 @@ export default {
                     With decades of professional experience in renting, repairing and transporting just all kinds of
                     yachts and boats under our belt – we can assure you that we are your best choice!
                 </p>
-                <button type="button" class="btn btn-info text-white py-3 px-4 fw-bold">More Details</button>
+                <button type="button" class="btn btn-info text-white py-3 mt-4 px-4 fw-bold">More Details</button>
             </div>
         </div>
     </section>
-    <section class="ms_banner-down d-flex flex-column justify-content-center align-items-center "> 
-        <h2 class="ms_title-down fw-bolder text-white text-center mb-5">Yacht Charters, Repairs & Transportation, US-wide! </h2>
+    <section class="ms_banner-down d-flex flex-column justify-content-center align-items-center ">
+        <h2 class="ms_title-down fw-bolder text-white text-center mb-5">Yacht Charters, Repairs & Transportation, US-wide!
+        </h2>
         <button type="button" class="btn btn-info text-white py-3 px-4 fw-bold">More Details</button>
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 h2,
 p {
     color: #3A3A50;
@@ -104,6 +105,7 @@ p {
 
 .ms_banner-up {
     background-image: url("../assets/bg4.jpg");
+    background-position: center;
     width: 100%;
     height: 100vh;
 }
@@ -115,15 +117,20 @@ p {
 
 .ms_content {
     width: 50%;
+
+    h2 {
+        font-size: 4rem;
+    }
 }
 
 .ms_banner-down {
     background-image: url("../assets/bg5.jpg");
+    background-position: center;
     width: 100%;
-    height:100vh;
+    height: 100vh;
 }
 
-.ms_title-down{
+.ms_title-down {
     font-size: 6rem;
 
 }
