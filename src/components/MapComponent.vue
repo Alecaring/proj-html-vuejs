@@ -28,18 +28,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <h1 class="text-center fs-3 px-5 mx-5 text-body-tertiary">
-      // Developers la mappa funziona è ancora in fase di sviluppo se volete
-      provarla dovete solo
-      <span class="text-danger">rimuovere il div che fa da hover.</span> <br />
-      // Bisogna studiare un modo per non far scrollare la mappa insieme allo
-      scroll della pagina
-    </h1>
-    <div class="containerMap my-5">
-      <div class="map" id="map">
-        <div class="HoverControlls"></div>
-      </div>
+  <div class="containerMap my-5">
+    <div class="map" id="map">
+      <div class="HoverControlls"></div>
     </div>
   </div>
 </template>
