@@ -89,8 +89,8 @@ export default {
             </div>
         </div>
     </section>
-    <section class="ms_banner-down">
-        <h2 class="ms_title-down fw-bolder text-white text-center d-flex align-items-center">Yacht Charters, Repairs & Transportation, US-wide! </h2>
+    <section class="ms_banner-down d-flex flex-column justify-content-center align-items-center "> 
+        <h2 class="ms_title-down fw-bolder text-white text-center mb-5">Yacht Charters, Repairs & Transportation, US-wide! </h2>
         <button type="button" class="btn btn-info text-white py-3 px-4 fw-bold">More Details</button>
     </section>
 </template>
@@ -120,7 +120,7 @@ p {
 .ms_banner-down {
     background-image: url("../assets/bg5.jpg");
     width: 100%;
-    height: 100vh;
+    height:100vh;
 }
 
 .ms_title-down{
