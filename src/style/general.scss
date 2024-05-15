@@ -13,3 +13,49 @@ html::-webkit-scrollbar {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
   }
+  .ms_containerBanner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+
+    .ms_innerBanner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .ms_innerBannerVideo {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .ms_txtCont {
+        position: absolute;
+        width: 50%;
+        margin: 0 5%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+
+        h1 {
+            font-size: 10rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+
+    }
+}

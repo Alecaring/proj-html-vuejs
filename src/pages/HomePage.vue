@@ -1,7 +1,7 @@
 
 <script>
 import AppSlider from '../components/AppSlider.vue';
-import AppBanner from "../components/AppBanner.vue";
+import AppNewBanner from "../components/AppNewBanner.vue";
 import AppCard from "../components/AppCard.vue";
 import { store } from '../store';
 import AppcardHover from '../components/AppcardHover.vue';
@@ -21,7 +21,7 @@ export default {
             return new URL(`../assets/${img}.jpg`, import.meta.url).href;
         }
     },
-    components: { AppSlider, AppBanner, AppCard, AppcardHover }
+    components: { AppSlider, AppNewBanner, AppCard, AppcardHover }
 };
 </script>
   
@@ -58,6 +58,9 @@ export default {
         </div>
     </div>
     <button class="btn border text-white fs-4">Learn More</button>
+    </section>
+    <section v-for="item in store.NewBanner">
+        <AppNewBanner :bannerObj="item" />
     </section>
 </template>
 

@@ -1,11 +1,13 @@
 <script>
 import AppCard from "../components/AppCard.vue";
+import AppNewBanner from "../components/AppNewBanner.vue";
 import { store } from "../store";
 
 export default {
   components: {
     AppCard,
-  },
+    AppNewBanner
+},
   data() {
     return {
       store,
@@ -15,7 +17,9 @@ export default {
 </script>
 
 <template>
-  <div>VIDEO</div>
+  <section v-for="item in store.bannerVideo">
+    <AppNewBanner :bannerObj="item" />
+  </section>
   <div>
     <h2>About us</h2>
     

@@ -34,3 +34,41 @@ export default {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.273);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    i {
+        color: #09c2dd;
+        font-size: 5rem;
+    }
+    h3 {
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.hover {
+    opacity: 0;
+}
+.icone {
+    border-radius: 50%;
+    font-size: 2.3rem;
+    text-align: center;
+    line-height: 5rem;
+    background-color: #09c2dd;
+    width: 5rem;
+    height: 5rem;
+    color: white;
+}
+
+
+</style>

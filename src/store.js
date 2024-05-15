@@ -106,6 +106,29 @@ export const store = reactive({
       txt: "Convertibles",
     },
   ],
+  NewBanner: [
+    {
+      imgage: "bg7",
+      title: "ENJOY",
+      subtitle: "WORLD RALLY 2017-19",
+      para: "Explore some of the most beautiful regions of the world. Make your dreams come true and join the Yachtec World Rally 2017-19.",
+      buttonTxt: "More Details",
+      button: "btn fw-bold btn-info text-white py-2 my-4",
+      contBanner: "ms_containerBanner",
+      imgStyle: "ms_innerBanner",
+      txtCont: "ms_txtCont",
+      bigtitle: "font-size: 10rem",
+      titleSmall: " font-size: 3rem",
+      parag: "font-size: 1.3rem",
+
+    },
+  ],
+  bannerVideo: [
+    {
+      video: "Boat-View-HD",
+      para: "With our help anyone with a love for sailing in his or her heart will be able to put it to practice!",
+    },
+  ],
   toggleMenu() {
     this.isOpen = !this.isOpen;
   },
