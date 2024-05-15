@@ -125,8 +125,20 @@ export const store = reactive({
   ],
   bannerVideo: [
     {
+      imgage: "none",
+      title: "",
+      subtitle: "With our help anyone with a love for sailing in his or her heart will be able to put it to practice!",
+      buttonTxt: "Learn More",
+      button: "btn fw-bold btn-info text-white py-2 my-4",
+      contBanner: "ms_containerBannerVideo",
+      imgStyle: "none",
+      videoStyle: "ms_innerBannerVideo",
+      txtCont: "ms_txtCont text-white ms-5 w-50",
+      bigtitle: "fs-1",
+      titleSmall: "fs-1",
+      parag: "",
       video: "Boat-View-HD",
-      para: "With our help anyone with a love for sailing in his or her heart will be able to put it to practice!",
+      para: "",
     },
   ],
   toggleMenu() {

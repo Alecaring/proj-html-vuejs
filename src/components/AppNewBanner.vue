@@ -24,7 +24,6 @@ export default {
 
 <template>
     <div :class="bannerObj.contBanner">
-
         <img :class="bannerObj.imgStyle" :src="getUrlPath(bannerObj.imgage)" alt="">
         <video :class="bannerObj.videoStyle" playsinline autoplay loop muted :src="getUrlPathVideo(bannerObj.video)"></video>
         <div :class="bannerObj.txtCont">

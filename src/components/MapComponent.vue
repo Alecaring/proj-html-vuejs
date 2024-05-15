@@ -57,7 +57,7 @@ export default defineComponent({
         attribution:
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(initialMap.value);
-      L.marker([43.738197732600774, 7.424887056238044]).addTo(initialMap.value).bindPopup('<strong style="color:red">Monaco</strong>')
+      L.marker([43.738197732600774, 7.424887056238044]).addTo(initialMap.value).bindPopup('<strong style="color:red; font-size: 1.5arem;">Monaco</strong>')
         .openPopup();
       L.marker([41.894621496987845, 12.484487036435569]).addTo(initialMap.value);
       L.marker([44.36629182067352, 8.575338327256066]).addTo(initialMap.value);
