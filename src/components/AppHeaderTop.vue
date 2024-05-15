@@ -12,10 +12,10 @@ export default {
     <section class="ms_header-top ">
         <div class="d-flex justify-content-between container-fluid px-3 py-2">
             <div>
-                <span class="mx-5"><a href=""><i class="fa-solid fa-location-dot mx-3"></i></a>7087 Richmond hwy, Alexandria, VA</span>
+                <span class="mx-4"><a href=""><i class="fa-solid fa-location-dot mx-3"></i></a>7087 Richmond hwy, Alexandria, VA</span>
                 <span><a href=""><i class="fa-solid fa-phone mx-3"></i></a>800-2345-6789</span>
             </div>
-            <div>
+            <div class="mx-4">
                 <a href=""><i class="fa-brands fa-facebook-f mx-3"></i></a> 
                 <a href=""><i class="fa-brands fa-instagram mx-3"></i></a>
                 <a href=""><i class="fa-brands fa-twitter mx-3"></i></a>

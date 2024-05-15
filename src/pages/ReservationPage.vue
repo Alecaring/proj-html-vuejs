@@ -7,7 +7,7 @@ export default {
 
 <template>
     <div>
-        reservation
+        ReservationPage
     </div>
 </template>
 
