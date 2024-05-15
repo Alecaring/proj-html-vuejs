@@ -11,10 +11,10 @@ export default {
     AppcardHover,
   },
   methods: {
-        getUrlPath(img) {
-            return new URL(`../assets/${img}.jpg`, import.meta.url).href;
-        },
-      },
+    getUrlPath(img) {
+      return new URL(`../assets/${img}.jpg`, import.meta.url).href;
+    },
+  },
   data() {
     return {
       store,
@@ -27,9 +27,11 @@ export default {
   <section v-for="item in store.bannerVideo">
     <AppNewBanner :bannerObj="item" />
   </section>
-  <div>
-    <h2>About us</h2>
+  
+  <section class="about-us ms_containerCardx4">
+    <h1 class="fw-bold fs-1 px-4 mb-3 text-center">About us</h1>
 
+    <span class="ms_line mb-4"><span class="ms_inner_ine "></span></span>
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2">
         <div class="col" v-for="curCard in store.yachtInfo">
@@ -40,20 +42,23 @@ export default {
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <section>
     <h1>Why Pepole Choose Us</h1>
   </section>
 
-  <section class="team">
-    <h1>Meet Our Team</h1>
-    <div class="container">
+  <section class="team ms_containerCardx4">
+    <h1 class="fw-bold fs-1 px-4 mb-3">Meet Our Team</h1>
+
+    <span class="ms_line mb-4"><span class="ms_inner_ine"></span></span>
+
+    <div class="container ">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <div class="col" v-for="curTeam in store.teams">
           <div class="card">
             <img
-              :src="getUrlPath(curTeam.image) "
+              :src="getUrlPath(curTeam.image)"
               class="card-img-top"
               alt="..."
             />
@@ -87,9 +92,18 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.about-us{
+  .ms_inner_ine {
+    display: block;
+    width: 5%;
+    border: 0.1px solid #09c2dd;
+    margin:0 auto;
+  }
+}
 .team {
   .card {
     border-radius: 0;
+    margin-bottom: 20px;
     h5 {
       color: #09c2dd;
     }
