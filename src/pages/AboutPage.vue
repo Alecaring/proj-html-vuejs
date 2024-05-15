@@ -1,13 +1,13 @@
 <script>
 import AppCard from "../components/AppCard.vue";
-import AppNewBanner from "../components/AppNewBanner.vue";
+import AppBanner from "../components/AppBanner.vue";
 import AppcardHover from "../components/AppcardHover.vue";
 import { store } from "../store";
 
 export default {
   components: {
     AppCard,
-    AppNewBanner,
+    AppBanner,
     AppcardHover,
   },
   methods: {
@@ -25,7 +25,7 @@ export default {
 
 <template>
   <section v-for="item in store.bannerVideo">
-    <AppNewBanner :bannerObj="item" />
+    <AppBanner :bannerObj="item" />
   </section>
 
   <section class="about-us ms_containerCardx4">

@@ -1,99 +1,56 @@
 <script>
-
-import { store } from '../store';
-
 export default {
-
-    data() {
-        return {
-            store,
-            bannerImg: [
-                {
-                    img: "bg4",
-                    alt: "Boat life",
-                },
-                {
-                    img: "bg5",
-                    alt: "Ride the waves",
-                },
-            ]
-        }
+  props: {
+    bannerObj: Object,
+  },
+  data() {
+    return {
+      bannerSev: true,
+    };
+  },
+  methods: {
+    getUrlPath(img) {
+      return new URL(`../assets/${img}.jpg`, import.meta.url).href;
     },
-    methods: {
-        getUrlPath(img) {
-            return new URL(`../assets/${img}.jpg`, import.meta.url).href;
-        }
-    }
-}
+    getUrlPathVideo(video) {
+      return new URL(`../assets/${video}.mp4`, import.meta.url).href;
+    },
+  },
+};
 </script>
 
 <template>
-        <section class="ms_banner-up">
-        <div class="p-4 d-flex">
-            <div class="ms_empty"></div>
-            <div class="ms_content d-flex flex-column justify-content-center align-items-start pe-5">
-                <h2 class="fw-bold mb-4">Our History</h2>
-                <hr>
-                <p class="fw-bold mb-4">
-                    Founded by a worldwide-famous yacht racer Alfred Tannenstrick, since its inception back in 1977,
-                    this company has been a welcoming harbor for all yachting and sailing enthusiasts, from all across
-                    the US!
-                </p>
-                <p class="mb-4">
-                    We offer a real variety of professional services, from the simple yachts chartering and corporate
-                    events, all the way to yacht repairs, upgrades and modifications and maintenance checkups.
-                </p>
-                <p class="mb-4">
-                    With decades of professional experience in renting, repairing and transporting just all kinds of
-                    yachts and boats under our belt – we can assure you that we are your best choice!
-                </p>
-                <button type="button" class="btn btn-info text-white py-3 mt-4 px-4 fw-bold">More Details</button>
-            </div>
-        </div>
-    </section>
-    <section class="ms_banner-down d-flex flex-column justify-content-center align-items-center ">
-        <h2 class="ms_title-down fw-bolder text-white text-center mb-5">Yacht Charters, Repairs & Transportation, US-wide!
-        </h2>
-        <button type="button" class="btn btn-info text-white py-3 px-4 fw-bold">More Details</button>
-    </section>
+  <div :class="bannerObj.contBanner" class="video">
+    <img
+      :class="bannerObj.imgStyle"
+      :src="getUrlPath(bannerObj.imgage)"
+      alt=""
+    />
+    <video
+      :class="bannerObj.videoStyle"
+      playsinline
+      autoplay
+      loop
+      muted
+      :src="getUrlPathVideo(bannerObj.video)"
+    ></video>
+    <div :class="bannerObj.txtCont">
+      <h1 :class="bannerObj.bigtitle">{{ bannerObj.title }}</h1>
+      <h2 :class="bannerObj.titleSmall" >
+        {{ bannerObj.subtitle }}
+      </h2>
+      <p :class="bannerObj.parag">{{ bannerObj.para }}</p>
+      <p :class="bannerObj.parag1">{{ bannerObj.para1 }}</p>
+      <button :class="bannerObj.button">{{ bannerObj.buttonTxt }}</button>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-h2,
-p {
-    color: #3A3A50;
-    font-size: 1.2rem;
-}
-
-.ms_banner-up {
-    background-image: url("../assets/bg4.jpg");
-    background-position: center;
-    width: 100%;
-    height: 900px;
-}
-
-.ms_empty {
-    width: 50%;
-    height: 800px;
-}
-
-.ms_content {
-    width: 50%;
-
-    h2 {
-        font-size: 4rem;
-    }
-}
-
-.ms_banner-down {
-    background-image: url("../assets/bg5.jpg");
-    background-position: center;
-    width: 100%;
-    height: 850px;
-}
-
-.ms_title-down {
-    font-size: 6rem;
-
+.video {
+  background-color: white;
+  h2 {
+    font-weight: 400;
+  }
 }
 </style>

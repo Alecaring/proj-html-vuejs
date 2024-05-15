@@ -52,6 +52,28 @@ html {
     }
   }
 }
+.ms_containerSectionblog {
+  width: 90%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 20px;
+  margin: 0 auto;
+}
+.ms_ContainerBolg{ 
+  width: calc(100% / 3 );
+  height: auto;
+  overflow: hidden;
+}
+.ms_innerBanner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .ms_containerBanner {
   position: relative;
@@ -60,14 +82,6 @@ html {
   background-color: aqua;
   display: flex;
   align-items: center;
-
-  .ms_innerBanner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
 
   .ms_txtCont {
     position: absolute;
@@ -92,5 +106,9 @@ html {
       font-size: 1.3rem;
     }
 
+    .titleHeroTop {
+      color: #3A3A50;
+      font-size: 1.2rem;
+  }
   }
 }

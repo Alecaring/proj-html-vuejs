@@ -239,4 +239,70 @@ export const store = reactive({
       image: "persone8",
     },
   ],
+
+  heroHomeTop:[
+    {
+      contBanner: "ms_containerBanner justify-content-end",
+      imgStyle: "ms_innerBanner",
+      imgage: "bg4",
+      videoStyle: "none",
+      video: "",
+      txtCont: "ms_txtCont text-dark align-items-start m-auto ",
+      bigtitle: "titleHeroTop fs-1",
+      title: "Our History",
+      titleSmall: "fw-bold fs-5",
+      subtitle: "Founded by a worldwide-famous yacht racer Alfred Tannenstrick, since its inception back in 1977, this company has been a welcoming harbor for all yachting and sailing enthusiasts, from all across the US!",
+      parag:"",
+      para:"We offer a real variety of professional services, from the simple yachts chartering and corporate events, all the way to yacht repairs, upgrades and modifications and maintenance checkups.",
+      parag1:"",
+      para1:"With decades of professional experience in renting, repairing and transporting just all kinds of yachts and boats under our belt – we can assure you that we are your best choice!",
+      button:"btn fw-bold btn-info text-white py-2 my-4",
+      buttonTxt:"Read More"
+    }
+  ],
+
+  heroHomeBottom:[
+    {
+      contBanner: "ms_containerBanner",
+      imgStyle: "ms_innerBanner",
+      imgage: "bg5",
+      videoStyle: "none",
+      video: "",
+      txtCont: "ms_txtCont text-dark align-items-start m-auto ",
+      bigtitle: "titleHeroTop",
+      title: "Yacht Charters, Repairs & Transportation, US-wide!",
+      titleSmall: "",
+      subtitle: "",
+      parag:"",
+      para:"",
+      parag1:"",
+      para1:"",
+      button:"btn fw-bold btn-info text-white py-2 my-4",
+      buttonTxt:"More Details"
+    }
+  ],
+
+  postArray: [
+    {
+        img: "post1",
+        alt: "ride the waves",
+        date: "December 16, 2020",
+        discussion: "Is Greece a Good Choice for Yacht Sailing?",
+        container: "d-flex flex-column align-items-center",
+    },
+    {
+        img: "post2",
+        alt: "relax on boat",
+        date: "December 16, 2020",
+        discussion: "Seattle Yachts and Northwest Yachts Announce Merger",
+        container: "d-flex flex-column align-items-center",
+    },
+    {
+        img: "post3",
+        alt: "ship's rudder",
+        date: "December 16, 2020",
+        discussion: "Video: Superyacht ‘Project Jupiter’ Launched By Lurssen",
+        container: "d-flex flex-column align-items-center",
+    }
+],
 });

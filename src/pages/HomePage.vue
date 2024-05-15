@@ -1,10 +1,10 @@
 <script>
 import AppSlider from '../components/AppSlider.vue';
-import AppBanner from '../components/AppBanner.vue';
-import AppNewBanner from "../components/AppNewBanner.vue";
+import AppBanner from "../components/AppBanner.vue";
 import AppCard from "../components/AppCard.vue";
 import { store } from '../store';
 import AppcardHover from '../components/AppcardHover.vue';
+import AppBlog from '../components/AppBlog.vue';
 
 export default {
     data() {
@@ -21,7 +21,7 @@ export default {
             return new URL(`../assets/${img}.jpg`, import.meta.url).href;
         }
     },
-    components: { AppSlider, AppNewBanner, AppCard, AppcardHover, AppBanner }
+    components: { AppSlider, AppBanner, AppCard, AppcardHover, AppBlog }
 };
 </script>
 
@@ -29,8 +29,11 @@ export default {
     <section class="container-fluid p-0 ms_container">
         <AppSlider />
     </section>
-    <section>
-        <AppBanner />
+    <section v-for="item in store.heroHomeTop">
+        <AppBanner :bannerObj="item" />
+    </section>
+    <section v-for="item in store.heroHomeBottom">
+        <AppBanner :bannerObj="item" />
     </section>
     <section class="ms_cardsHome">
         <h1 class="fw-bold fs-1">Services</h1>
@@ -60,7 +63,12 @@ export default {
         <button class="btn border text-white fs-4">Learn More</button>
     </section>
     <section v-for="item in store.NewBanner">
-        <AppNewBanner :bannerObj="item" />
+        <AppBanner :bannerObj="item" />
+    </section>
+    <section class="ms_containerSectionblog">
+        <div class="ms_ContainerBolg" v-for="item in store.postArray">
+            <AppBlog :cardObj="item" />
+        </div>
     </section>
 </template>
 
