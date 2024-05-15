@@ -1,12 +1,14 @@
 <script>
 import AppCard from "../components/AppCard.vue";
 import AppNewBanner from "../components/AppNewBanner.vue";
+import AppcardHover from "../components/AppcardHover.vue";
 import { store } from "../store";
 
 export default {
   components: {
     AppCard,
-    AppNewBanner
+    AppNewBanner,
+    AppcardHover,
 },
   data() {
     return {
@@ -44,11 +46,46 @@ export default {
     <h1>Meet Our Team</h1>
   </section>
 
-  <section>
-    <h1>Featured Projects</h1>
-  </section>
+  <section class="ms_containerCardx4 ">
+
+
+    <h1 class="fw-bold fs-1 px-4">Featured Projects</h1>
+    
+    <span class="ms_line mt-5"><span class="ms_inner_ine"></span></span>
+    <div class="container-fluid px-5">
+          <div class="row row-cols-1 row-cols-md-4">
+            <div class="col" v-for="item in store.cardsHomeServices">
+              <!-- CARD -->
+              <AppcardHover :cardObj="item" />
+              <!-- /CARD -->
+            </div>
+        </div>
+    </div>
+    </section>
 </template>
 
 <style scoped lang="scss">
+.ms_line {
+  width: 90%;
+  border: 0.1px solid rgba(0, 0, 0, 0.074);
+  background-color: rgba(0, 0, 0, 0.03);
+  margin: 0 auto;
+  .ms_inner_ine {
+    display: block;
+    width: 5%;
+    border: 0.1px solid #09c2dd;
+  }
+}
+.ms_containerCardx4 {
+    display: flex;
+    flex-direction: column;
+    h1{
+      width: 90%;
+      margin: 0 auto;
+      margin-left: 36px;
+    }
+
+
+}
 
 </style>
