@@ -36,7 +36,7 @@ export default {
     ></video>
     <div :class="bannerObj.txtCont">
       <h1 :class="bannerObj.bigtitle">{{ bannerObj.title }}</h1>
-      <h2 :class="bannerObj.titleSmall" class="text-black">
+      <h2 :class="bannerObj.titleSmall" >
         {{ bannerObj.subtitle }}
       </h2>
       <p :class="bannerObj.parag">{{ bannerObj.para }}</p>

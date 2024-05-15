@@ -137,7 +137,7 @@ export const store = reactive({
       videoStyle: "ms_innerBannerVideo",
       txtCont: "ms_txtCont text-white ms-5 w-50",
       bigtitle: "fs-1",
-      titleSmall: "fs-1",
+      titleSmall: "fs-1 text-black",
       parag: "",
       video: "Boat-View-HD",
       para: "",
