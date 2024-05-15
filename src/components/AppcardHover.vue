@@ -40,6 +40,7 @@ export default {
     align-items: center;
     justify-content: center;
     opacity: 1;
+    border-radius: 3%;
     i {
         color: #09c2dd;
         font-size: 5rem;
@@ -52,8 +53,9 @@ export default {
 
     img {
         width: 100%;
-        height: 100%;
         object-fit: cover;
+        border-radius: 3%;
+
     }
 }
 .hover {

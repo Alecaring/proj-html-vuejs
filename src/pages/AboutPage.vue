@@ -24,12 +24,12 @@ export default {
 </script>
 
 <template>
-  <section v-for="item in store.bannerVideo">
+  <section class="mb-4" v-for="item in store.bannerVideo">
     <AppNewBanner :bannerObj="item" />
   </section>
   
   <section class="about-us ms_containerCardx4">
-    <h1 class="fw-bold fs-1 px-4 mb-3 text-center">About us</h1>
+    <h1 class="fw-bold fs-1 mb-3 text-center">About us</h1>
 
     <span class="ms_line mb-4"><span class="ms_inner_ine "></span></span>
     <div class="container">
@@ -80,7 +80,7 @@ export default {
 
     <span class="ms_line mt-5"><span class="ms_inner_ine"></span></span>
     <div class="container-fluid px-5">
-      <div class="row row-cols-1 row-cols-md-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <div class="col" v-for="item in store.cardsHomeServices">
           <!-- CARD -->
           <AppcardHover :cardObj="item" />
@@ -93,12 +93,14 @@ export default {
 
 <style scoped lang="scss">
 .about-us{
+  
   .ms_inner_ine {
     display: block;
     width: 5%;
     border: 0.1px solid #09c2dd;
     margin:0 auto;
   }
+  
 }
 .team {
   .card {
@@ -134,7 +136,6 @@ export default {
   h1 {
     width: 90%;
     margin: 0 auto;
-    margin-left: 36px;
   }
 }
 </style>
