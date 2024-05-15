@@ -26,6 +26,7 @@ export default {
 .icone {
   border-radius: 50%;
   font-size: 2.3rem;
+  font-weight: 200;
   text-align: center;
   line-height: 5rem;
   background-color: #09c2dd;

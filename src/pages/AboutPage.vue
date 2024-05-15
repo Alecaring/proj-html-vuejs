@@ -9,7 +9,12 @@ export default {
     AppCard,
     AppNewBanner,
     AppcardHover,
-},
+  },
+  methods: {
+        getUrlPath(img) {
+            return new URL(`../assets/${img}.jpg`, import.meta.url).href;
+        },
+      },
   data() {
     return {
       store,
@@ -24,7 +29,7 @@ export default {
   </section>
   <div>
     <h2>About us</h2>
-    
+
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2">
         <div class="col" v-for="curCard in store.yachtInfo">
@@ -35,7 +40,6 @@ export default {
         </div>
       </div>
     </div>
-
   </div>
 
   <section>
@@ -44,27 +48,61 @@ export default {
 
   <section class="team">
     <h1>Meet Our Team</h1>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col" v-for="curTeam in store.teams">
+          <div class="card">
+            <img
+              :src="getUrlPath(curTeam.image) "
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ curTeam.name }}</h5>
+              <p class="job">{{ curTeam.position }}</p>
+              <p class="card-text">
+                {{ curTeam.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="ms_containerCardx4 ">
-
-
+  <section class="ms_containerCardx4">
     <h1 class="fw-bold fs-1 px-4">Featured Projects</h1>
-    
+
     <span class="ms_line mt-5"><span class="ms_inner_ine"></span></span>
     <div class="container-fluid px-5">
-          <div class="row row-cols-1 row-cols-md-4">
-            <div class="col" v-for="item in store.cardsHomeServices">
-              <!-- CARD -->
-              <AppcardHover :cardObj="item" />
-              <!-- /CARD -->
-            </div>
+      <div class="row row-cols-1 row-cols-md-4">
+        <div class="col" v-for="item in store.cardsHomeServices">
+          <!-- CARD -->
+          <AppcardHover :cardObj="item" />
+          <!-- /CARD -->
         </div>
+      </div>
     </div>
-    </section>
+  </section>
 </template>
 
 <style scoped lang="scss">
+.team {
+  .card {
+    border-radius: 0;
+    h5 {
+      color: #09c2dd;
+    }
+    .job {
+      font-weight: 600;
+    }
+
+    img {
+      border-radius: 0;
+    }
+  }
+}
+
 .ms_line {
   width: 90%;
   border: 0.1px solid rgba(0, 0, 0, 0.074);
@@ -77,15 +115,12 @@ export default {
   }
 }
 .ms_containerCardx4 {
-    display: flex;
-    flex-direction: column;
-    h1{
-      width: 90%;
-      margin: 0 auto;
-      margin-left: 36px;
-    }
-
-
+  display: flex;
+  flex-direction: column;
+  h1 {
+    width: 90%;
+    margin: 0 auto;
+    margin-left: 36px;
+  }
 }
-
 </style>
