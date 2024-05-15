@@ -47,8 +47,9 @@ export default {
 
 <style lang="scss" scoped>
 .video {
+  background-color: white;
   h2 {
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 </style>

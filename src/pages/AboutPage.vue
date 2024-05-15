@@ -24,14 +24,14 @@ export default {
 </script>
 
 <template>
-  <section class="mb-4" v-for="item in store.bannerVideo">
+  <section v-for="item in store.bannerVideo">
     <AppNewBanner :bannerObj="item" />
   </section>
-  
-  <section class="about-us ms_containerCardx4">
-    <h1 class="fw-bold fs-1 mb-3 text-center">About us</h1>
 
-    <span class="ms_line mb-4"><span class="ms_inner_ine "></span></span>
+  <section class="about-us ms_containerCardx4">
+    <h1 class="fw-bold fs-1 mb-3 pt-4 text-center">About us</h1>
+
+    <span class="ms_line mb-4 mt-3"><span class="ms_inner_ine"></span></span>
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2">
         <div class="col" v-for="curCard in store.yachtInfo">
@@ -49,11 +49,11 @@ export default {
   </section>
 
   <section class="team ms_containerCardx4">
-    <h1 class="fw-bold fs-1 px-4 mb-3">Meet Our Team</h1>
+    <h1 class="fw-bold fs-1 pt-4 mb-3">Meet Our Team</h1>
 
-    <span class="ms_line mb-4"><span class="ms_inner_ine"></span></span>
+    <span class="ms_line mb-4 mt-3"><span class="ms_inner_ine"></span></span>
 
-    <div class="container ">
+    <div class="container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <div class="col" v-for="curTeam in store.teams">
           <div class="card">
@@ -75,11 +75,10 @@ export default {
     </div>
   </section>
 
-  <section class="ms_containerCardx4">
-    <h1 class="fw-bold fs-1 px-4">Featured Projects</h1>
-
-    <span class="ms_line mt-5"><span class="ms_inner_ine"></span></span>
-    <div class="container-fluid px-5">
+  <section class="ms_containerCardx4 projects">
+    <h1 class="fw-bold fs-1 pt-4 mb-3">Featured Projects</h1>
+    <span class="ms_line  mt-3"><span class="ms_inner_ine"></span></span>
+    <div class="container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <div class="col" v-for="item in store.cardsHomeServices">
           <!-- CARD -->
@@ -92,18 +91,21 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.about-us{
-  
+.about-us {
+  background-image: url("../assets/bg6.jpg");
+  background-size: cover;
   .ms_inner_ine {
     display: block;
     width: 5%;
     border: 0.1px solid #09c2dd;
-    margin:0 auto;
+    margin: 0 auto;
   }
-  
 }
 .team {
+  background-color: #f8f9fd;
   .card {
+    border: 0;
+    background-color: #f8f9fd;
     border-radius: 0;
     margin-bottom: 20px;
     h5 {

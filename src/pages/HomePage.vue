@@ -45,7 +45,7 @@ export default {
             </div>
         </div>
     </section>
-    <section class="ms_containerCardx4 py-5">
+    <section class="ms_containerCardx4 py-5 our-yatch">
         <h1 class="fw-bold fs-1 text-white pt-3">Our Yachts</h1>
         <span class="ms_line mt-5"><span class="ms_inner_ine"></span></span>
         <div class="container-fluid p-5">
@@ -66,6 +66,19 @@ export default {
 
 
 <style scoped lang="scss">
+.our-yatch{
+    .ms_line {
+    width: 90%;
+    border: 0px ;
+    .ms_inner_ine {
+        display: block;
+        width: 5%;
+        margin: 0 auto;
+        border: .1px solid #f1f3f4;
+    }
+}
+}
+
 .ms_cardsHome {
     background-image: url("../assets/bg6.jpg");
     background-attachment: fixed;
