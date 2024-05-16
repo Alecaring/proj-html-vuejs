@@ -115,7 +115,7 @@ export const store = reactive({
       subtitle: "WORLD RALLY 2017-19",
       para: "Explore some of the most beautiful regions of the world. Make your dreams come true and join the Yachtec World Rally 2017-19.",
       buttonTxt: "More Details",
-      button: "btn fw-bold btn-info text-white py-2 my-4",
+      button: "btn fw-bold btn-info text-white py-3 my-4",
       contBanner: "ms_containerBanner",
       imgStyle: "ms_innerBanner",
       txtCont: "ms_txtCont",
@@ -248,15 +248,15 @@ export const store = reactive({
       videoStyle: "none",
       video: "",
       txtCont: "ms_txtCont text-dark align-items-start m-auto ",
-      bigtitle: "titleHeroTop fs-1",
+      bigtitle: "titleHeroTop fs-1 mb-5",
       title: "Our History",
-      titleSmall: "fw-bold fs-5",
+      titleSmall: "fw-bold fs-5 mb-4 ",
       subtitle: "Founded by a worldwide-famous yacht racer Alfred Tannenstrick, since its inception back in 1977, this company has been a welcoming harbor for all yachting and sailing enthusiasts, from all across the US!",
       parag:"",
       para:"We offer a real variety of professional services, from the simple yachts chartering and corporate events, all the way to yacht repairs, upgrades and modifications and maintenance checkups.",
       parag1:"",
       para1:"With decades of professional experience in renting, repairing and transporting just all kinds of yachts and boats under our belt – we can assure you that we are your best choice!",
-      button:"btn fw-bold btn-info text-white py-2 my-4",
+      button:"btn fw-bold btn-info text-white py-3 my-4",
       buttonTxt:"Read More"
     }
   ],
@@ -268,8 +268,8 @@ export const store = reactive({
       imgage: "bg5",
       videoStyle: "none",
       video: "",
-      txtCont: "ms_txtCont text-dark align-items-start m-auto ",
-      bigtitle: "titleHeroTop",
+      txtCont: "ms_txtCont text-dark align-items-start m-auto w-100",
+      bigtitle: "titleHeroBottom text-center text-white fw-bold",
       title: "Yacht Charters, Repairs & Transportation, US-wide!",
       titleSmall: "",
       subtitle: "",
@@ -277,7 +277,7 @@ export const store = reactive({
       para:"",
       parag1:"",
       para1:"",
-      button:"btn fw-bold btn-info text-white py-2 my-4",
+      button:"btn fw-bold btn-info text-white py-3 my-4 m-auto",
       buttonTxt:"More Details"
     }
   ],
@@ -289,6 +289,8 @@ export const store = reactive({
         date: "December 16, 2020",
         discussion: "Is Greece a Good Choice for Yacht Sailing?",
         container: "d-flex flex-column align-items-center",
+        styleDate:"mt-2 ",
+        styleDiscussion:"fs-3 text-center fw-bold ms_styleDate"
     },
     {
         img: "post2",
@@ -296,6 +298,8 @@ export const store = reactive({
         date: "December 16, 2020",
         discussion: "Seattle Yachts and Northwest Yachts Announce Merger",
         container: "d-flex flex-column align-items-center",
+        styleDate:"mt-2 fs-6",
+        styleDiscussion:"fs-3 text-center fw-bold"
     },
     {
         img: "post3",
@@ -303,6 +307,8 @@ export const store = reactive({
         date: "December 16, 2020",
         discussion: "Video: Superyacht ‘Project Jupiter’ Launched By Lurssen",
         container: "d-flex flex-column align-items-center",
+        styleDate:"mt-2 fs-6",
+        styleDiscussion:"fs-3 text-center fw-bold"
     }
 ],
 });

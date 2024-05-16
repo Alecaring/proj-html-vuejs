@@ -20,8 +20,8 @@ export default {
     <section :class="cardObj.container">
         <h2 class="text-center"></h2>
         <img :class="cardObj.imgStyle" :src="getUrlPath(cardObj.img)" :alt="cardObj.alt">
-        <p>{{ cardObj.date }}</p>
-        <p>{{ cardObj.discussion }}</p>
+        <p :class="cardObj.styleDate">{{ cardObj.date }}</p>
+        <p :class="cardObj.styleDiscussion">{{ cardObj.discussion }}</p>
     </section>
     
 </template>
