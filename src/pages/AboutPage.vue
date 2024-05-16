@@ -14,10 +14,38 @@ export default {
     getUrlPath(img) {
       return new URL(`../assets/${img}.jpg`, import.meta.url).href;
     },
+    startCounters() {
+      this.counters.forEach((counter) => {
+        // Rimuovo l'event listener dopo che è stato attivato
+        window.removeEventListener("scroll", this.startCounters);
+        const increment = counter.targetValue / 1000; // --> secondi
+        let currentValue = 1; // --> inizio del contatore
+        const interval = setInterval(() => {
+          if (currentValue < counter.targetValue) {
+            currentValue += increment;
+            counter.value = Math.min(
+              Math.floor(currentValue),
+              counter.targetValue
+            );
+          } else {
+            clearInterval(interval);
+          }
+        }, 1000 / 60); // Approssimazione a 60 FPS per una maggiore fluidità
+      });
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.startCounters, { once: true });
   },
   data() {
     return {
       store,
+      counters: [
+        { value: 0, label: "Yachts Available", targetValue: 5586 },
+        { value: 0, label: "Types of Yachts", targetValue: 3864 },
+        { value: 0, label: "Charters a Year", targetValue: 98 },
+        { value: 0, label: "Countries Covered", targetValue: 11 },
+      ],
     };
   },
 };
@@ -44,8 +72,23 @@ export default {
     </div>
   </section>
 
-  <section>
-    <h1>Why Pepole Choose Us</h1>
+  <section class="counter ms_containerCardx4">
+    <h1 class="fw-bold fs-1 mb-3 pt-5 text-center">Why People Choose Us</h1>
+    <span class="ms_line mb-4 mt-3"><span class="ms_inner_ine"></span></span>
+
+    <div class="d-flex justify-content-around p-5">
+      <div class="text-center" v-for="(counter, index) in counters">
+        <span class="numb-counter">{{ counter.value }}</span>
+        <p class="text-counter">{{ counter.label }}</p>
+      </div>
+    </div>
+
+    <!-- <div class="d-flex justify-content-around p-5">
+      <div class="text-center">
+        <span class="numb-counter">5586</span>
+        <p class="text-counter">Yachts Available</p>
+      </div> ....
+    </div> -->
   </section>
 
   <section class="team ms_containerCardx4">
@@ -77,7 +120,7 @@ export default {
 
   <section class="ms_containerCardx4 projects">
     <h1 class="fw-bold fs-1 pt-4 mb-3">Featured Projects</h1>
-    <span class="ms_line  mt-3"><span class="ms_inner_ine"></span></span>
+    <span class="ms_line mt-3"><span class="ms_inner_ine"></span></span>
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
         <div class="col" v-for="item in store.cardsHomeServices">
@@ -91,6 +134,29 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.numb-counter {
+  color: #09c2dd;
+  padding-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 3px solid;
+  font-size: 2rem;
+}
+
+.text-counter {
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.counter {
+  .ms_inner_ine {
+    display: block;
+    width: 5%;
+    border: 0.1px solid #09c2dd;
+    margin: 0 auto;
+  }
+}
+
 .about-us {
   background-image: url("../assets/bg6.jpg");
   background-size: cover;
