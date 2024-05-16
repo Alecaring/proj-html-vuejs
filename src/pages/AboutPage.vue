@@ -58,13 +58,11 @@ export default {
 
   <section class="about-us ms_containerCardx4">
     <h1 class="fw-bold fs-1 mb-3 pt-4 text-center">About us</h1>
-
     <span class="ms_line mb-4 mt-3"><span class="ms_inner_ine"></span></span>
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2">
         <div class="col" v-for="curCard in store.yachtInfo">
           <!-- CARD -->
-
           <AppCard :cardObj="curCard" />
           <!-- /CARD -->
         </div>
@@ -82,13 +80,6 @@ export default {
         <p class="text-counter">{{ counter.label }}</p>
       </div>
     </div>
-
-    <!-- <div class="d-flex justify-content-around p-5">
-      <div class="text-center">
-        <span class="numb-counter">5586</span>
-        <p class="text-counter">Yachts Available</p>
-      </div> ....
-    </div> -->
   </section>
 
   <section class="team ms_containerCardx4">
@@ -118,7 +109,7 @@ export default {
     </div>
   </section>
 
-  <section class="ms_containerCardx4 projects">
+  <section class="projects ms_containerCardx4">
     <h1 class="fw-bold fs-1 pt-4 mb-3">Featured Projects</h1>
     <span class="ms_line mt-3"><span class="ms_inner_ine"></span></span>
     <div class="container">
@@ -127,6 +118,59 @@ export default {
           <!-- CARD -->
           <AppcardHover :cardObj="item" />
           <!-- /CARD -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials ms_containerCardx4">
+    <h1 class="fw-bold fs-1 mb-3 pt-4 text-center">Testimonials</h1>
+    <span class="ms_line mb-4 mt-3"><span class="ms_inner_ine"></span></span>
+    <div class="container">
+      <div class="row row-cols-1">
+        <div class="col-12 d-flex">
+          <!-- CARD -->
+          <div class="d-flex justify-content-between p-4 test-1">
+            <figure>
+              <img
+                src="../assets/person0-p0a17bbqv6696rzdb2ly3jl0kdng6od3fj7vti5wi8.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="pe-5 ps-3">
+              <h2>Yatch Repairs</h2>
+              <p>
+                As a yacht owner, after either of my regular maintenance
+                checkups, I oftentimes find it necessary to do this or that kind
+                of a repair. The thing is that I don’t always have enough time
+                (or sometimes the skill), to do all of the repairs all by
+                myself…
+              </p>
+              <span> - Albert Winning</span>
+            </div>
+          </div>
+
+          <div class="d-flex ps-5 p-4 test-2">
+            <figure>
+              <img src="../assets/person01.jpg" alt="" />
+            </figure>
+            <div class="pe-5 ps-3">
+              <h2>Yatch Rentals</h2>
+              <p>
+                Having had a real handful of favorite pastimes over the course
+                of my whole adult life, sailing was always front and center in
+                such a list. So, when I found out about this yachts chartering
+                service located just a few miles near my home, I was thrilled!
+              </p>
+              <span> - Reginald Stanhow</span>
+            </div>
+          </div>
+          <!-- /CARD -->
+        </div>
+        <div class="text-center testimonial-btn">
+          <button class="btn fw-bold btn-info text-white py-2 my-4">
+            View All
+          </button>
         </div>
       </div>
     </div>
@@ -148,7 +192,9 @@ export default {
   font-size: 1.3rem;
 }
 
-.counter {
+.counter,
+.testimonials,
+.about-us {
   .ms_inner_ine {
     display: block;
     width: 5%;
@@ -160,13 +206,8 @@ export default {
 .about-us {
   background-image: url("../assets/bg6.jpg");
   background-size: cover;
-  .ms_inner_ine {
-    display: block;
-    width: 5%;
-    border: 0.1px solid #09c2dd;
-    margin: 0 auto;
-  }
 }
+
 .team {
   background-color: #f8f9fd;
   .card {
@@ -198,12 +239,45 @@ export default {
     border: 0.1px solid #09c2dd;
   }
 }
+
 .ms_containerCardx4 {
   display: flex;
   flex-direction: column;
   h1 {
     width: 90%;
     margin: 0 auto;
+  }
+}
+
+.testimonials {
+  background-color: #f8f9fd;
+  img {
+    height: 150px;
+    aspect-ratio: 0.8;
+    object-fit: cover;
+  }
+  p {
+    padding-top: 15px;
+    padding-right: 4rem;
+    color: gray;
+    letter-spacing: 1.5px;
+  }
+  span {
+    color: #09c2dd;
+    font-weight: bold;
+  }
+  button {
+    padding: 1.5rem;
+  }
+  .testimonial-btn {
+    padding: 2rem;
+  }
+  .test-2 {
+    margin-left: 5rem;
+  }
+
+  h2 {
+    font-weight: bold;
   }
 }
 </style>

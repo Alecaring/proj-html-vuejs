@@ -24,6 +24,11 @@ import AppFooter from "./components/AppFooter.vue"
   <AppFooter />
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
+
+*{
+  font-family: "Poppins", Sans-serif;
+  letter-spacing: 1.3px;
+}
 
 </style>
