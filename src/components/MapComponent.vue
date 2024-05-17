@@ -92,11 +92,9 @@ export default defineComponent({
   <div class="containerMap my-5">
     <div class="map" :class="isClassActive ? 'ms_z-index' : ''" id="map">
       <div class="HoverControlls" :class="isClassActive ? 'toRemove' : ''">
-        Press the "A" key to move around the map
+        Press the "A" key to move the map
       </div>
-      <div class="bannerMap">
-
-      </div>
+     
     </div>
   </div>
 </template>
